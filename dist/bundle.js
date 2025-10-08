@@ -106,7 +106,7 @@ eval("{\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleEle
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./src/math.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logo.png */ \"./src/logo.png\");\n\r\n\r\n\r\n\r\nconst img = document.createElement('img');\r\nimg.src = _logo_png__WEBPACK_IMPORTED_MODULE_2__;\r\ndocument.body.appendChild(img);\r\n\r\n\r\nconsole.log('2 + 3 =', (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.add)(2, 3));\r\nconsole.log('2 * 3 =', (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.multiply)(2, 3));\r\n\n\n//# sourceURL=webpack://builder/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./src/math.js\");\n/* harmony import */ var _new_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./new.js */ \"./src/new.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logo.png */ \"./src/logo.png\");\n\n\n\n\nconst img = document.createElement('img');\nimg.src = _logo_png__WEBPACK_IMPORTED_MODULE_3__;\ndocument.body.appendChild(img);\n(0,_new_js__WEBPACK_IMPORTED_MODULE_1__.sayHello)('김철수');\n(0,_new_js__WEBPACK_IMPORTED_MODULE_1__.delayedHello)();\nconsole.log('2 + 3 =', (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.add)(2, 3));\nconsole.log('2 * 3 =', (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.multiply)(2, 3));\n\n//# sourceURL=webpack://builder/./src/index.js?\n}");
 
 /***/ }),
 
@@ -126,7 +126,17 @@ eval("{module.exports = __webpack_require__.p + \"b677f0c3f433073a0a80.png\";\n\
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   add: () => (/* binding */ add),\n/* harmony export */   multiply: () => (/* binding */ multiply)\n/* harmony export */ });\nfunction add(a, b) {\r\n  return a + b;\r\n}\r\n\r\nfunction multiply(a, b) {\r\n  return a * b;\r\n}\r\n\n\n//# sourceURL=webpack://builder/./src/math.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   add: () => (/* binding */ add),\n/* harmony export */   multiply: () => (/* binding */ multiply)\n/* harmony export */ });\nfunction add(a, b) {\n  return a + b;\n}\nfunction multiply(a, b) {\n  return a * b;\n}\n\n//# sourceURL=webpack://builder/./src/math.js?\n}");
+
+/***/ }),
+
+/***/ "./src/new.js":
+/*!********************!*\
+  !*** ./src/new.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   delayedHello: () => (/* binding */ delayedHello),\n/* harmony export */   sayHello: () => (/* binding */ sayHello)\n/* harmony export */ });\nconst sayHello = (name = '사용자') => {\n  console.log(`👋 안녕하세요, ${name}님!`);\n};\nasync function delayedHello() {\n  await new Promise(r => setTimeout(r, 1000));\n  console.log('⏰ 1초가 지났어요!');\n}\n\n//# sourceURL=webpack://builder/./src/new.js?\n}");
 
 /***/ }),
 

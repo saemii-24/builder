@@ -12,6 +12,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,             // 모든 .js 파일
+        exclude: /node_modules/,   // 외부 라이브러리 제외
+        use: {
+          loader: 'babel-loader',  // Babel로 변환
+        },
+      },
+      {
         test: /\.css$/i,   // .css로 끝나는 파일 찾기
         use: ['style-loader', 'css-loader'], // 오른쪽부터 순서대로 실행
       },
