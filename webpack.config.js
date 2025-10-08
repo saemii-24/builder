@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',  
@@ -6,6 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',  // 결과물 파일명
     path: path.resolve(__dirname, 'dist'),  // 저장 경로
+    clean: true,  // 매번 빌드할 때 dist 폴더 초기화
   },
   module: {
     rules: [
@@ -13,6 +15,16 @@ module.exports = {
         test: /\.css$/i,   // .css로 끝나는 파일 찾기
         use: ['style-loader', 'css-loader'], // 오른쪽부터 순서대로 실행
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i, // 이미지 파일 처리
+        type: 'asset/resource', 
+      },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Webpack Demo',
+      template: './src/template.html', // 템플릿 파일 지정
+    }),
+  ],
 };
