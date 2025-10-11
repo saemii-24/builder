@@ -1,5 +1,5 @@
-import { add, multiply } from "./math.js";
-import { delayedHello, sayHello } from "./new.js";
+import { add, multiply } from "./math";
+import { delayedHello, sayHello } from "./new";
 import "./style.css";
 import logo from "./logo.png";
 
@@ -14,3 +14,9 @@ console.log("2 + 3 =", add(2, 3));
 console.log("2 * 3 =", multiply(2, 3));
 
 console.log("webpack dev server");
+
+const greet = (name: string): void => {
+  console.log(`Hello, ${name}!`);
+};
+
+greet("TypeScript + Babel + Webpack");
