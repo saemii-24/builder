@@ -1,5 +1,5 @@
-import { add, multiply } from "./math";
-import { delayedHello, sayHello } from "./new";
+import { add, multiply } from "./math.js";
+import { delayedHello, sayHello } from "./new.js";
 import "./style.css";
 import logo from "./logo.png";
 
