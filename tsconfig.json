@@ -8,7 +8,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "checkJs": false
+    "checkJs": false,
+    "jsx": "react-jsx", // JSX 지원을 활성화 함
+    "moduleResolution": "bundler" // webpack과 호환되도록 함
   },
   "include": ["src"] //.d.ts 파일 인식
 }

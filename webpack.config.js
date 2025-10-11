@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js", // 시작 파일
+  entry: "./src/index.tsx", // 시작 파일
   output: {
     filename: "bundle.js", // 결과물 파일명
     path: path.resolve(__dirname, "dist"), // 저장 경로
