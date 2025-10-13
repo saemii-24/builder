@@ -29,7 +29,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack Demo",
-      template: "./src/template.html", // 템플릿 파일 지정
+      template: "./src/index.html", // 템플릿 파일 지정
     }),
   ],
   devServer: {
@@ -37,6 +37,9 @@ module.exports = {
     open: true, // 서버 실행 시 자동으로 브라우저 열기
     hot: true, // 수정 시 페이지 전체 새로고침 없이 갱신
     port: 3000, // 기본값 8080 -> 포트 변경 가능
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
   devtool: "source-map",
 };
